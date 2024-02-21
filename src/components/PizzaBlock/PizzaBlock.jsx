@@ -22,7 +22,7 @@ export const PizzaBlock = ({
       <div className="pizza-block__selector">
         <ul>
           {types.map((type, i) => (
-            <li
+            <li key={type}
               onClick={() => setActiveType(i)}
               className={activeType == i ? "active" : ""}
             >
@@ -32,7 +32,7 @@ export const PizzaBlock = ({
         </ul>
         <ul>
           {sizes.map((value, i) => (
-            <li
+            <li key={value}
               onClick={() => setActiveSize(i)}
               className={activeSize == i ? "active" : ""}
             >
